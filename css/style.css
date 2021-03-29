@@ -19,6 +19,10 @@ body {
   margin: auto;
   display: flex;
 }
+
+i:hover {
+  cursor: pointer;
+}
 /* /general */
 /* contenitore sinistro */
 .contatti {
@@ -105,10 +109,12 @@ body {
   background-color: #fff;
   display: flex;
   align-items: center;
+  border-radius: 5px;
 }
 
 .serch i {
   margin: 0 20px;
+  cursor: inherit;
 }
 
 .serch input {
@@ -116,14 +122,15 @@ body {
   border: none;
 }
 
-.serch input:focus {
+input:focus {
   outline: none;
 }
 /* /ricerca */
-
+/* contatti */
 .utenti {
   height: calc(100% - 160px);
   width: 100%;
+  overflow: auto;
 }
 
 .contatto {
@@ -140,6 +147,7 @@ body {
   border-radius: 50%;
   margin: 0px 20px;
 }
+/* /contatti */
 /* /contenitore sinistro */
 /* contenitore destro */
 
@@ -155,18 +163,37 @@ body {
   width: 100%;
   background-color: #EAEAEA;
 }
-
+/* conversazione */
 .conv-center {
   width: 100%;
-  height: calc(100% - 120px);
+  height: calc(100% - 100px);
   background-image: url(../img/mine.jpg);
+  overflow-y: auto;
 }
-
+/* /conversazione */
+/* input-mess */
 .conv-bot {
   width: 100%;
-  height: 60px;
+  height: 40px;
   background-color: #F3EEEA;
+  display: flex;
+  align-items: center;
+  padding: 5px;
 }
+
+.conv-bot i {
+  margin: 0 20px;
+  color: #6B7376;
+}
+
+.conv-bot input {
+  border: none;
+  width: calc(100% - 90px);
+  height: 100%;
+  border-radius: 5px;
+  padding: 5px;
+}
+/* /input-mess */
 /* /contenitore destro */
 /* verde sfondo #009688
 grigio sfondo #DBDBD2
