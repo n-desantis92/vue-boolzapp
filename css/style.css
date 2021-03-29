@@ -163,6 +163,14 @@ input:focus {
   width: 100%;
   background-color: #EAEAEA;
 }
+
+.conv-top .option-ut {
+  justify-content: flex-start;
+}
+
+.conv-top .option-ut i {
+margin-right: 5px;
+}
 /* conversazione */
 .conv-center {
   width: 100%;
@@ -181,6 +189,15 @@ input:focus {
   padding: 20px;
   margin-bottom: 10px;
   align-self: flex-end;
+  position: relative;
+}
+
+.mess-utente span {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 10px;
+  color: #B1B1B1;
 }
 
 .mess-contatto {
@@ -189,6 +206,15 @@ input:focus {
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 10px;
+  position: relative;
+}
+
+.mess-contatto span {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 10px;
+  color: #B1B1B1;
 }
 /* /conversazione */
 /* input-mess */
