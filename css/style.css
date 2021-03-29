@@ -169,6 +169,26 @@ input:focus {
   height: calc(100% - 100px);
   background-image: url(../img/mine.jpg);
   overflow-y: auto;
+  padding: 30px 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mess-utente {
+  width: 50%;
+  background-color: #D5F9BA;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 10px;
+  align-self: flex-end;
+}
+
+.mess-contatto {
+  width: 50%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 10px;
 }
 /* /conversazione */
 /* input-mess */
