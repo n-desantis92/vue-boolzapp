@@ -27,17 +27,45 @@ body {
   display: flex;
   flex-direction: column;
 }
-
+/* utente */
 .utente {
   height: 60px;
   width: 100%;
-  background-color: red;
+  background-color: #EAEAEA;
+  display: flex;
+  align-items: center;
 }
+
+img {
+  background-color: red;
+  width: 50px;
+  height: 80%;
+  border-radius: 50%;
+  margin: 0px 10px;
+}
+
+.nome-utente {
+  width: calc(100% - 150px);
+}
+
+.option-ut {
+  height: 100%;
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.option-ut i {
+  margin: 0px 10px;
+  color: #B1B1B1;
+}
+/* /utente */
 
 .notifiche {
   height: 60px;
   width: 100%;
-  background-color: #fff;
+  background-color: #8EDAFC;
 }
 
 .serch {
@@ -65,7 +93,7 @@ body {
 .conv-top {
   height: 60px;
   width: 100%;
-  background-color: lightblue;
+  background-color: #EAEAEA;
 }
 
 .conv-center {
@@ -77,7 +105,15 @@ body {
 .conv-bot {
   width: 100%;
   height: 60px;
-  background-color: yellow;
+  background-color: #F3EEEA;
 
 }
 /* /contenitore destro */
+/* verde sfondo #009688
+grigio sfondo #DBDBD2
+azzurro notifiche #8EDAFC
+grigio icone in alto #B1B1B1
+grigio icone in basso #6B7376
+grigino sfondo contenitore headers #EAEAEA
+grigino sfonfo contenitore input #F3EEEA
+verde messaggi inviati #D5F9BA */
