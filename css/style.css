@@ -3,3 +3,81 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* general */
+body {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to top,#dbdbd2 86%, #009688 86%);
+  display: flex;
+}
+
+.container-app {
+  width: 80%;
+  height: 90%;
+  margin: auto;
+  display: flex;
+}
+/* /general */
+/* contenitore sinistro */
+.contatti {
+  width: 40%;
+  height: 100%;
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+}
+
+.utente {
+  height: 60px;
+  width: 100%;
+  background-color: red;
+}
+
+.notifiche {
+  height: 60px;
+  width: 100%;
+  background-color: #fff;
+}
+
+.serch {
+  height: 40px;
+  width: 100%;
+  background-color: brown;
+}
+
+.utenti {
+  height: calc(100% - 160px);
+  width: 100%;
+  background-color: orange;
+}
+/* /contenitore sinistro */
+/* contenitore destro */
+
+.conversazione {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: blue;
+}
+
+.conv-top {
+  height: 60px;
+  width: 100%;
+  background-color: lightblue;
+}
+
+.conv-center {
+  width: 100%;
+  height: calc(100% - 120px);
+  background-color: purple;
+}
+
+.conv-bot {
+  width: 100%;
+  height: 60px;
+  background-color: yellow;
+
+}
+/* /contenitore destro */
