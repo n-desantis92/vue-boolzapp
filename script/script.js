@@ -85,6 +85,9 @@ var app = new Vue ({
     ],
     newmess: "",
     indexcont: 0,
+    giorno: dayjs().date(),
+    mese: dayjs().month(),
+    anno: dayjs().year(),
   },
 
 
@@ -95,7 +98,7 @@ var app = new Vue ({
       if (this.newmess !== "") {
 
         const nuovomess = {
-                            date: '10/01/2020 15:50:00',
+                            date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                             message: this.newmess,
                             status: 'sent'
                         };
@@ -105,16 +108,18 @@ var app = new Vue ({
 
         setTimeout(()=> {
           const nuovomess = {
-                              date: '10/01/2020 15:50:00',
-                              message: "ok",
-                              status: 'received'
-                          };
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                message: "ok",
+                status: 'received'
+            };
 
           this.contacts[this.indexcont].messages.push(nuovomess);
         },1000);
       }
 
     },
+
+
 
     seleziona: function (i) {
       this.indexcont = i;
