@@ -37,12 +37,12 @@
       <div class="cont-serch">
         <div class="serch">
           <i class="fas fa-search"></i>
-          <input type="text" name="" value="" placeholder="Cerca o inizia una nuova chat">
+          <input type="text" placeholder="Cerca o inizia una nuova chat">
         </div>
       </div>
       <div class="utenti">
-        <div class="contatto " v-for="(item,i) in contacts">
-          <img :src="'img/avatar' + item.avatar +'.jpg'" alt="foto-profilo">
+        <div class="contatto " v-for="(item,i) in contacts" @click="seleziona">
+          <img :src="'img/avatar' + item.avatar +'.jpg'" alt="foto-profilo item.name">
           <h3>{{item.name}}</h3>
         </div>
 
@@ -63,18 +63,12 @@
       </div>
       <div class="conv-center">
 
-        <div class="mess-utente" >
+        <div :class="" v-for="(item,i) in contacts">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            <span class="data-mes">10/01/2020 15:50:00</span>
+            <span class="date">10/01/2020 15:50:00</span>
           </p>
         </div>
-        <div class="mess-contatto">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            <span class="data-mes">10/01/2020 15:50:00</span>
-          </p>
-        </div>
+
       </div>
       <div class="conv-bot">
           <i class="far fa-smile"></i>

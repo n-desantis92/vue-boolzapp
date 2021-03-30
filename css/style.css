@@ -181,7 +181,7 @@ input:focus {
   flex-direction: column;
 }
 
-.mess-utente {
+.sent {
   min-width: 40%;
   max-width: 50%;
   background-color: #D5F9BA;
@@ -192,7 +192,7 @@ input:focus {
   position: relative;
 }
 
-.mess-utente span {
+.sent span {
   position: absolute;
   bottom: 5px;
   right: 5px;
@@ -200,7 +200,7 @@ input:focus {
   color: #6B7376;
 }
 
-.mess-contatto {
+.received {
   min-width: 40%;
   max-width: 50%;
   background-color: #fff;
@@ -210,7 +210,7 @@ input:focus {
   position: relative;
 }
 
-.mess-contatto span {
+.received span {
   position: absolute;
   bottom: 5px;
   right: 5px;
@@ -244,7 +244,7 @@ input:focus {
 /* /contenitore destro */
 
 /* classi da utilizzare */
-.contatto.ut-select {
+.ut-select {
   background-color: #EAEAEA;
 }
 

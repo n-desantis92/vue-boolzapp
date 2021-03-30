@@ -84,9 +84,19 @@ var app = new Vue ({
         },
     ],
     newmess: "",
+    indexcont: 0,
   },
+
+  // mounted: {
+  //
+  // },
 
   methods: {
 
+
+    seleziona: function (i) {
+      
+      return console.log(this.contacts[i]);
+    }
   }
 })
