@@ -51,7 +51,7 @@
       <!-- lista contatti -->
       <div class="utenti">
         <div class="contatto" :class="i == indexcont ? 'ut-select' : ''" v-for="(item,i) in contacts" @click="seleziona(i)">
-          <img :src="'img/avatar' + item.avatar +'.jpg'" alt="foto-profilo item.name">
+          <img :src="'img/avatar' + item.avatar +'.jpg'" alt="'foto-profilo' + item.name">
           <h3>{{item.name}}</h3>
         </div>
       </div>
@@ -80,7 +80,7 @@
         <div :class="item.status" v-for="(item,i) in contacts[indexcont].messages">
           <p>
             {{item.message}}
-            <span class="date">{{item.date}}</span>
+            <span>{{item.date}}</span>
           </p>
         </div>
         <!-- /mess -->
@@ -89,7 +89,7 @@
       <!-- input-mess -->
       <div class="conv-bot">
           <i class="far fa-smile"></i>
-          <input type="text" v-model="newmess" placeholder="Scrivi un messaggio">
+          <input @keydown.13="inviomess" type="text" v-model="newmess" placeholder="Scrivi un messaggio">
           <i class="fas fa-microphone"></i>
       </div>
       <!-- /input-mess -->

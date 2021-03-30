@@ -87,12 +87,34 @@ var app = new Vue ({
     indexcont: 0,
   },
 
-  // mounted: {
-  //
-  // },
+
 
   methods: {
 
+    inviomess: function () {
+      if (this.newmess !== "") {
+
+        const nuovomess = {
+                            date: '10/01/2020 15:50:00',
+                            message: this.newmess,
+                            status: 'sent'
+                        };
+
+        this.contacts[this.indexcont].messages.push(nuovomess);
+        this.newmess = "";
+
+        setTimeout(()=> {
+          const nuovomess = {
+                              date: '10/01/2020 15:50:00',
+                              message: "ok",
+                              status: 'received'
+                          };
+
+          this.contacts[this.indexcont].messages.push(nuovomess);
+        },1000);
+      }
+
+    },
 
     seleziona: function (i) {
       this.indexcont = i;
