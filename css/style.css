@@ -14,6 +14,7 @@ body {
 }
 
 .container-app {
+  min-width: 800px;
   width: 80%;
   height: 90%;
   margin: auto;
@@ -74,12 +75,18 @@ i:hover {
   display: flex;
   align-items: center;
 }
+
+.notifiche h4,
+.notifiche a {
+  font-size: 12px;
+}
+
 .campanella {
   background-color: #fff;
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  margin: 0px 20px;
+  margin: 10px 20px;
   display: flex;
 }
 
@@ -163,14 +170,6 @@ input:focus {
   width: 100%;
   background-color: #EAEAEA;
 }
-
-.conv-top .option-ut {
-  justify-content: flex-start;
-}
-
-.conv-top .option-ut i {
-margin-right: 5px;
-}
 /* conversazione */
 .conv-center {
   width: 100%;
@@ -183,38 +182,22 @@ margin-right: 5px;
 }
 
 .mess-utente {
-  width: 50%;
+  min-width: 40%;
+  max-width: 50%;
   background-color: #D5F9BA;
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 10px;
   align-self: flex-end;
-  position: relative;
-}
-
-.mess-utente span {
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
-  font-size: 10px;
-  color: #B1B1B1;
 }
 
 .mess-contatto {
-  width: 50%;
+  min-width: 40%;
+  max-width: 50%;
   background-color: #fff;
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 10px;
-  position: relative;
-}
-
-.mess-contatto span {
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
-  font-size: 10px;
-  color: #B1B1B1;
 }
 /* /conversazione */
 /* input-mess */
@@ -241,6 +224,14 @@ margin-right: 5px;
 }
 /* /input-mess */
 /* /contenitore destro */
+
+/* classi da utilizzare */
+.contatto.ut-select {
+  background-color: #EAEAEA;
+}
+
+
+
 /* verde sfondo #009688
 grigio sfondo #DBDBD2
 azzurro notifiche #8EDAFC

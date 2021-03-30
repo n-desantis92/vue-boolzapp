@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
   <title>vue-boolzapp</title>
 </head>
 <body>
-  <div class="container-app">
+  <div id="app" class="container-app">
     <div class="contatti">
       <div class="utente">
         <img src="img/avatar_io.jpg" alt="foto-profilo" class="avatar">
@@ -41,9 +41,9 @@
         </div>
       </div>
       <div class="utenti">
-        <div class="contatto">
-          <img src="img/avatar_1.jpg" alt="foto-profilo">
-          <h3>Michele</h3>
+        <div class="contatto " v-for="(item,i) in contacts">
+          <img :src="'img/avatar' + item.avatar +'.jpg'" alt="foto-profilo">
+          <h3>{{item.name}}</h3>
         </div>
 
       </div>
@@ -52,7 +52,7 @@
       <div class="conv-top utente">
         <img src="img/avatar_1.jpg" alt="foto-profilo" class="avatar">
         <div class="nome-utente">
-          <h3>Michele</h3>
+          <h3>{{contacts[0].name}}</h3>
           <p>Ultimo accesso oggi alle</p>
         </div>
         <div class="option-ut">
@@ -62,20 +62,29 @@
         </div>
       </div>
       <div class="conv-center">
+<<<<<<< Updated upstream
         <div class="mess-utente">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <dim class="mess-contatto">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </dim>
+=======
+        <div class="mess-utente" >
+          <p>
             <span class="data-mes">10/01/2020 15:50:00</span>
           </p>
         </div>
-        <dim class="mess-contatto">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  
+        <div class="mess-contatto">
+          <p>
             <span class="data-mes">10/01/2020 15:50:00</span>
           </p>
-        </dim>
+        </div>
+>>>>>>> Stashed changes
       </div>
       <div class="conv-bot">
           <i class="far fa-smile"></i>
-          <input type="text" name="" value="" placeholder="Scrivi un messaggio">
+          <input type="text" v-model="newmess" placeholder="Scrivi un messaggio">
           <i class="fas fa-microphone"></i>
       </div>
     </div>
