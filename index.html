@@ -41,7 +41,7 @@
         </div>
       </div>
       <div class="utenti">
-        <div class="contatto " v-for="(item,i) in contacts" @click="seleziona">
+        <div class="contatto" :class="i == indexcont ? 'ut-select' : ''" v-for="(item,i) in contacts" @click="seleziona(i)">
           <img :src="'img/avatar' + item.avatar +'.jpg'" alt="foto-profilo item.name">
           <h3>{{item.name}}</h3>
         </div>
@@ -50,9 +50,9 @@
     </div>
     <div class="conversazione">
       <div class="conv-top utente">
-        <img src="img/avatar_1.jpg" alt="foto-profilo" class="avatar">
+        <img :src="'img/avatar' + contacts[indexcont].avatar +'.jpg'" alt="foto-profilo" class="avatar">
         <div class="nome-utente">
-          <h3>{{contacts[0].name}}</h3>
+          <h3>{{contacts[indexcont].name}}</h3>
           <p>Ultimo accesso oggi alle</p>
         </div>
         <div class="option-ut">
@@ -63,9 +63,10 @@
       </div>
       <div class="conv-center">
 
-        <div :class="" v-for="(item,i) in contacts">
+        <div :class="item.status" v-for="(item,i) in contacts[indexcont].messages">
           <p>
-            <span class="date">10/01/2020 15:50:00</span>
+            {{item.message}}
+            <span class="date">{{item.date}}</span>
           </p>
         </div>
 

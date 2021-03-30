@@ -95,8 +95,7 @@ var app = new Vue ({
 
 
     seleziona: function (i) {
-      
-      return console.log(this.contacts[i]);
+      this.indexcont = i;
     }
   }
 })
