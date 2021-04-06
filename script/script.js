@@ -171,7 +171,8 @@ var app = new Vue ({
     newmess: "",
     indexcont: 0,
     ricerca: "",
-    contattifiltrati: ""
+    contattifiltrati: "",
+    visibile: "",
   },
 
 
