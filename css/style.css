@@ -24,6 +24,7 @@ body {
 i:hover {
   cursor: pointer;
 }
+
 /* /general */
 /* contenitore sinistro */
 .contatti {
@@ -217,6 +218,46 @@ input:focus {
   font-size: 10px;
   color: #6B7376;
 }
+
+.messaggio {
+  position: relative;
+  box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.messaggio i {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: #6B7376;
+  visibility: hidden;
+}
+
+.messaggio:hover.messaggio i.fas {
+  visibility: visible;
+}
+
+.option {
+  position: absolute;
+  right: 0;
+  top: 25px;
+  background-color: #fff;
+  list-style: none;
+  text-align: center;
+  z-index: 10;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+.option li {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.option li:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
 /* /conversazione */
 /* input-mess */
 .conv-bot {
@@ -248,13 +289,7 @@ input:focus {
   background-color: #EAEAEA;
 }
 
-.vis {
-  display: block;
-}
 
-.notvis {
-  display: none;
-}
 
 
 /* verde sfondo #009688

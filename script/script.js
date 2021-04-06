@@ -10,17 +10,20 @@ var app = new Vue ({
             messages: [{
                 date: '10/01/2020 15:30:55',
                 message: 'Hai portato a spasso il cane?',
-                status: 'sent'
+                status: 'sent',
+                showOption: false,
             },
                 {
                     date: '10/01/2020 15:50:00',
                     message: 'Ricordati di dargli da mangiare',
-                    status: 'sent'
+                    status: 'sent',
+                    showOption: false,
                 },
                 {
                     date: '10/01/2020 16:15:22',
                     message: 'Tutto fatto!',
-                    status: 'received'
+                    status: 'received',
+                    showOption: false,
                 }
             ],
         },
@@ -111,17 +114,17 @@ var app = new Vue ({
             messages: [{
                 date: '28/03/2020 10:10:40',
                 message: 'che facevi oggi al centro?',
-                status: 'received'
+                status: 'received',
             },
                 {
                     date: '28/03/2020 10:20:10',
                     message: 'al centro dove?',
-                    status: 'sent'
+                    status: 'sent',
                 },
                 {
                     date: '28/03/2020 16:15:22',
                     message: 'non eri tu?',
-                    status: 'received'
+                    status: 'received',
                 }
             ],
         },
@@ -171,8 +174,6 @@ var app = new Vue ({
     newmess: "",
     indexcont: 0,
     ricerca: "",
-    contattifiltrati: "",
-    visibile: "",
   },
 
 
@@ -204,10 +205,6 @@ var app = new Vue ({
 
     },
 
-    // filtraContatti: function () {
-    //   this.contacts.filter(this.ricerca);
-    // },
-
     seleziona: function (i) {
       this.indexcont = i;
     },
@@ -229,5 +226,18 @@ var app = new Vue ({
         }
       });
     },
+
+    openOption: function(item,i) {
+      if (item.showOption == false) {
+        item.showOption = true;
+      }else {
+        item.showOption = false;
+      }
+
+      // this.messages.forEach((item, i) => {}
+    },
+    deletMess:function () {
+
+    }
   }
 })
