@@ -21,7 +21,7 @@
       <div class="utente">
         <img src="img/avatar_io.jpg" alt="foto-profilo" class="avatar">
         <div class="nome-utente">
-          <h3>Marlena</h3>
+          <h3>Nicolas</h3>
         </div>
         <div class="option-ut">
           <i class="icone_azione__icone fas fa-circle-notch"></i>
@@ -45,12 +45,17 @@
       <div class="cont-serch">
         <div class="serch">
           <i class="fas fa-search"></i>
-          <input type="text" placeholder="Cerca o inizia una nuova chat">
+          <input @keydown.13="cerca" type="text" v-model="ricerca" placeholder="Cerca o inizia una nuova chat">
         </div>
       </div>
       <!-- /search -->
       <!-- lista contatti -->
       <div class="utenti">
+        <div class="contatto" :show="contacts.visible" :class="i == indexcont ? 'ut-select' : ''" v-for="(item,i) in contacts" @click="seleziona(i)">
+          <img :src="'img/avatar' + item.avatar +'.jpg'" alt="'foto-profilo' + item.name">
+          <h3>{{item.name}}</h3>
+        </div>
+
         <div class="contatto" :class="i == indexcont ? 'ut-select' : ''" v-for="(item,i) in contacts" @click="seleziona(i)">
           <img :src="'img/avatar' + item.avatar +'.jpg'" alt="'foto-profilo' + item.name">
           <h3>{{item.name}}</h3>
