@@ -234,10 +234,14 @@ var app = new Vue ({
         item.showOption = false;
       }
 
-      // this.messages.forEach((item, i) => {}
     },
-    deletMess:function () {
+    deletMess:function (mess,i) {
+      this.contacts[this.indexcont].messages.forEach((mess, i) => {
+        this.contacts[this.indexcont].messages.splice(mess[i]);
+      });
 
+      // console.log(this.contacts[this.indexcont].messages);
+      // this.contacts[this.indexcont].messages.slice(item[i]);
     }
   }
 })

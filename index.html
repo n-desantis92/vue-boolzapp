@@ -83,7 +83,7 @@
           <i @click="openOption(item,i)" class="fas fa-chevron-down"></i>
             <ul v-show="item.showOption" class="option">
               <li>Info messaggio</li>
-              <li @click="deletMess">Cancella messaggio</li>
+              <li @click="deletMess(item,i)">Cancella messaggio</li>
             </ul>
           <p>
             {{item.message}}
