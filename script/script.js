@@ -34,17 +34,20 @@ var app = new Vue ({
             messages: [{
                 date: '20/03/2020 16:30:00',
                 message: 'Ciao come stai?',
-                status: 'sent'
+                status: 'sent',
+                showOption: false,
             },
                 {
                     date: '20/03/2020 16:30:55',
                     message: 'Bene grazie! Stasera ci vediamo?',
-                    status: 'received'
+                    status: 'received',
+                    showOption: false,
                 },
                 {
                     date: '20/03/2020 16:35:00',
                     message: 'Mi piacerebbe ma devo andare a fare la spesa.',
-                    status: 'received'
+                    status: 'received',
+                    showOption: false,
                 }
             ],
         },
@@ -55,17 +58,20 @@ var app = new Vue ({
             messages: [{
                 date: '28/03/2020 10:10:40',
                 message: 'La Marianna va in campagna',
-                status: 'received'
+                status: 'received',
+                showOption: false,
             },
                 {
                     date: '28/03/2020 10:20:10',
                     message: 'Sicuro di non aver sbagliato chat?',
-                    status: 'sent'
+                    status: 'sent',
+                    showOption: false,
                 },
                 {
                     date: '28/03/2020 16:15:22',
                     message: 'Ah scusa!',
-                    status: 'received'
+                    status: 'received',
+                    showOption: false,
                 }
             ],
         },
@@ -76,12 +82,14 @@ var app = new Vue ({
             messages: [{
                 date: '10/01/2020 15:30:55',
                 message: 'Lo sai che ha aperto una nuova pizzeria?',
-                status: 'sent'
+                status: 'sent',
+                showOption: false,
             },
                 {
                     date: '10/01/2020 15:50:00',
                     message: 'Si, ma preferirei andare al cinema',
-                    status: 'received'
+                    status: 'received',
+                    showOption: false,
                 },
 
             ],
@@ -93,17 +101,20 @@ var app = new Vue ({
             messages: [{
                 date: '28/03/2020 10:10:40',
                 message: 'hey ci sei?',
-                status: 'received'
+                status: 'received',
+                showOption: false,
             },
                 {
                     date: '28/03/2020 10:20:10',
                     message: 'Sicuro di non aver sbagliato chat?',
-                    status: 'sent'
+                    status: 'sent',
+                    showOption: false,
                 },
                 {
                     date: '28/03/2020 16:15:22',
                     message: 'Ah scusa!',
-                    status: 'received'
+                    status: 'received',
+                    showOption: false,
                 }
             ],
         },
@@ -115,16 +126,19 @@ var app = new Vue ({
                 date: '28/03/2020 10:10:40',
                 message: 'che facevi oggi al centro?',
                 status: 'received',
+                showOption: false,
             },
                 {
                     date: '28/03/2020 10:20:10',
                     message: 'al centro dove?',
                     status: 'sent',
+                    showOption: false,
                 },
                 {
                     date: '28/03/2020 16:15:22',
                     message: 'non eri tu?',
                     status: 'received',
+                    showOption: false,
                 }
             ],
         },
@@ -135,17 +149,20 @@ var app = new Vue ({
             messages: [{
                 date: '28/03/2020 10:10:40',
                 message: 'Ho perso tutto!',
-                status: 'received'
+                status: 'received',
+                showOption: false,
             },
                 {
                     date: '28/03/2020 10:20:10',
                     message: 'Sicuro?',
-                    status: 'sent'
+                    status: 'sent',
+                    showOption: false,
                 },
                 {
                     date: '28/03/2020 16:15:22',
                     message: 'sicurissimo!',
-                    status: 'received'
+                    status: 'received',
+                    showOption: false,
                 }
             ],
         },
@@ -156,17 +173,20 @@ var app = new Vue ({
             messages: [{
                 date: '28/03/2020 10:10:40',
                 message: 'La gallina fa le uova',
-                status: 'received'
+                status: 'received',
+                showOption: false,
             },
                 {
                     date: '28/03/2020 10:20:10',
                     message: 'Sicura di star bene?',
-                    status: 'sent'
+                    status: 'sent',
+                    showOption: false,
                 },
                 {
                     date: '28/03/2020 16:15:22',
                     message: 'non lo so!',
-                    status: 'received'
+                    status: 'received',
+                    showOption: false,
                 }
             ],
         },
@@ -215,14 +235,13 @@ var app = new Vue ({
         if (this.ricerca != "") {
 
           if (item.name.includes(this.ricerca)) {
-            console.log("ce l'ho fatta");
             item.visible = true;
-            console.log(item.visible);
 
           }else {
             item.visible = false;
-            console.log(item.visible);
           }
+        }else {
+          item.visible = true;
         }
       });
     },
@@ -235,13 +254,8 @@ var app = new Vue ({
       }
 
     },
-    deletMess:function (mess,i) {
-      this.contacts[this.indexcont].messages.forEach((mess, i) => {
-        this.contacts[this.indexcont].messages.splice(mess[i]);
-      });
-
-      // console.log(this.contacts[this.indexcont].messages);
-      // this.contacts[this.indexcont].messages.slice(item[i]);
+    deletMess:function (ind) {
+          this.contacts[this.indexcont].messages.splice(ind,1);
     }
   }
 })

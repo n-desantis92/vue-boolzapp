@@ -45,7 +45,7 @@
       <div class="cont-serch">
         <div class="serch">
           <i class="fas fa-search"></i>
-          <input @keydown.13="cerca" type="text" v-model="ricerca" placeholder="Cerca o inizia una nuova chat">
+          <input @keyup="cerca" type="text" v-model="ricerca" placeholder="Cerca o inizia una nuova chat">
         </div>
       </div>
       <!-- /search -->
@@ -83,7 +83,7 @@
           <i @click="openOption(item,i)" class="fas fa-chevron-down"></i>
             <ul v-show="item.showOption" class="option">
               <li>Info messaggio</li>
-              <li @click="deletMess(item,i)">Cancella messaggio</li>
+              <li @click="deletMess(i)">Cancella messaggio</li>
             </ul>
           <p>
             {{item.message}}
