@@ -51,7 +51,7 @@
       <!-- /search -->
       <!-- lista contatti -->
       <div class="utenti">
-        <div class="contatto" :show="contacts.visible" :class="i == indexcont ? 'ut-select' : ''" v-for="(item,i) in contacts" @click="seleziona(i)">
+        <div class="contatto" v-show="item.visible" :class="i == indexcont ? 'ut-select' : ''" v-for="(item,i) in contacts" @click="seleziona(i)">
           <img :src="'img/avatar' + item.avatar +'.jpg'" alt="'foto-profilo' + item.name">
           <h3>{{item.name}}</h3>
         </div>

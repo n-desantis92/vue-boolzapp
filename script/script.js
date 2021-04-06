@@ -219,15 +219,13 @@ var app = new Vue ({
 
           if (item.name.includes(this.ricerca)) {
             console.log("ce l'ho fatta");
-            this.visibile = "vis";
-            console.log(this.visibile);
-
-            return this.indexcont = i;
+            this.visible = "true";
+            console.log(this.visible);
 
           }else {
-            this.visibile = "notvis";
-            console.log(this.visibile);
-            return false
+            this.visible = "false";
+            console.log(this.visible);
+
           }
         }
       });

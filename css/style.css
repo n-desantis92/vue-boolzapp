@@ -248,6 +248,13 @@ input:focus {
   background-color: #EAEAEA;
 }
 
+.vis {
+  display: block;
+}
+
+.notvis {
+  display: none;
+}
 
 
 /* verde sfondo #009688
