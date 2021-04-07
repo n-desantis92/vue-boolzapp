@@ -234,7 +234,7 @@ var app = new Vue ({
         console.log(item.name,i);
         if (this.ricerca != "") {
 
-          if (item.name.includes(this.ricerca)) {
+          if (item.name.toLowerCase().includes(this.ricerca.toLowerCase())) {
             item.visible = true;
 
           }else {
