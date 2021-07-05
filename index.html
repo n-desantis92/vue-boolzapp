@@ -91,12 +91,17 @@
           </p>
         </div>
         <!-- /mess -->
+        <div class="emoticons" v-if="clickEmoticon">
+          <div class="emoticon" v-for="emoticon in emoticons" @click="addEmoticon(emoticon)">
+            {{emoticon}}
+          </div>
+        </div>
       </div>
       <!-- /conversazione -->
       <!-- input-mess -->
       <div class="conv-bot">
-          <i class="far fa-smile"></i>
-          <input @keydown.13="inviomess" type="text" v-model="newmess" placeholder="Scrivi un messaggio">
+          <i class="far fa-smile" @click="showEmoticon"></i>
+          <input @keydown.13="inviomess" type="text" v-model="newmess" placeholder="Scrivi un messaggio" @click="clickEmoticon = false">
           <i class="fas fa-microphone"></i>
       </div>
       <!-- /input-mess -->

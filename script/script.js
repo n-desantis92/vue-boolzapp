@@ -194,6 +194,11 @@ var app = new Vue ({
     newmess: "",
     indexcont: 0,
     ricerca: "",
+    emoticons: [
+        '😀','😆','😁','😅','😂','😉','😉','😊','😇','😍','😘','😗','🍋','🍌','🍍','🍎','🍏','🍄','🍔','🍟','🍺','🍷','🍸','🥃','🍫','🍬',
+        '🏂','⛹️','🚴'
+    ],
+    clickEmoticon: false
   },
 
 
@@ -255,7 +260,13 @@ var app = new Vue ({
 
     },
     deletMess:function (ind) {
-          this.contacts[this.indexcont].messages.splice(ind,1);
-    }
+      this.contacts[this.indexcont].messages.splice(ind,1);
+    },
+    showEmoticon: function() {
+      this.clickEmoticon == true ? this.clickEmoticon = false : this.clickEmoticon = true;
+    },
+    addEmoticon: function(emoticon){
+      this.newmess += emoticon;
+    },
   }
 })
